@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" style="color: white">
       <h2 class="section-title">Contact</h2>
       <p style="text-align:center;">Tu peux me contacter à : <strong>fdelattre12@gmail.com</strong></p>
     </section>
