@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELATTRE François</title>
+    <style>
+        body {
+            font-family: Consolas, sans-serif;
+            font-weight: normal;
+            margin: 0;
+            background-color: #111;
+            color: #ddd;
+        }
+
+        h1 {
+            font-family: Calibri;
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: #555;
+            width: 95%;
+            margin: 50px auto;
+            padding: 2%;
+            height: 45vh;
+            margin-bottom: 10%;
+            ;
+            position: relative;
+        }
+
+        .container * {
+            z-index: 5;
+            position: relative;
+            pointer-events: none;
+        }
+
+        .bannerMark {
+            margin-right: 20px;
+            display: inline-block;
+            position: inherit;
+            width: 20px;
+            height: 80px;
+            transition: width 0.5s ease;
+        }
+
+        .divFill {
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            inset: 0;
+            z-index: 1;
+            transition: opacity 0.5s ease;
+            pointer-events: all;
+        }
+
+        .divFill:hover {
+            opacity: 0.5;
+        }
+
+        .container:hover .bannerMark {
+            width: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #2c3e50;
+        }
+
+        .projectTitle {
+            display: inline-block;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+
+        footer {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio de François</h1>
+        <p>Bienvenue sur mon espace personnel où je partage mes projets et logiciels</p>
+    </header>
+
+    <div class="container"
+        style="background-image: url(BinanceBanner31brightGrid.png); background-repeat: no-repeat; background-size: cover;">
+        <div class="bannerMark" style="background-color: #aa0;"></div>
+        <div class="divFill" style="background: linear-gradient(to right, #000c, #0008);"></div>
+        <h1 class="projectTitle" style="color: #cc1; font-weight: bold;">Bot de trading Binance</h1>
+        <p style="font-size: larger;">En utilisant l'API Binance, le code importe des données et des indicateurs pour
+            une devise
+            choisie (Bitcoin, Ethereum, Dogecoin...) et envoie des requêtes (achat, vente, emprunts, etc...)
+            de décision en fonction de ces données et la stratégie choisie (scalping, swing trading ou day trading...).
+        </p>
+        <p>Techniques utilisées : Python, Binance API, Pandas, NumPy</p>
+    </div>
+
+    <div class="container">
+        <h1 style="color: #999; font-weight: bold;">"StoneBot" - Assistant IA</h1>
+        <h2>Gestionnaire de mails et de messageries</h2>
+        <h3>Projet personnel avec un ami camarade, hébergé sur serveur personnel.</h3>
+    </div>
+
+    <div class="container">
+        <section id="projets">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>"StoneBot" - Assistant IA, gestionnaire de mails et de messageries</h3>
+                    <p>Projet personnel avec un ami camarade, hébergé sur serveur personnel.</p>
+                </div>
+                <div class="card">
+                    <h3>Bot de trading Binance</h3>
+                    <p>En utilisant l'API Binance, le code importe des données et des indicateurs pour une devise
+                        choisie (Bitcoin, Ethereum, Dogecoin...) et envoie des requêtes (achat, vente, emprunts, etc...)
+                        de décision en fonction de ces données et la stratégie choisie.
+                    </p>
+                </div>
+                <!-- Ajoute d'autres projets ici -->
+            </div>
+        </section>
+
+
+
+        <section id="logiciels">
+            <h2 class="section-title">Mes Logiciels</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Autoclicker</h3>
+                    <p>Petit logiciel permettant d'activer le clic automatique de la souris avec une fréquence réglable.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Photovoltaïc</h3>
+                    <p>Site web pour gérer des installations de panneaux solaires en France.
+                    </p>
+                </div>
+                <!-- Ajoute d'autres logiciels ici -->
+            </div>
+        </section>
+
+        <section id="contact" style="color: white">
+            <h2 class="section-title">Contact</h2>
+            <p style="text-align:center;">Tu peux me contacter à : <strong>fdelattre12@gmail.com</strong></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 DELATTRE François</p>
+    </footer>
+</body>
+
+</html>
