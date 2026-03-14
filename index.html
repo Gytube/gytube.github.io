@@ -46,14 +46,18 @@
             padding: 2%;
             height: 45vh;
             margin-bottom: 10%;
-            ;
             position: relative;
+            overflow: hidden;
         }
 
         .container * {
             z-index: 5;
             position: relative;
             pointer-events: none;
+        }
+
+        .container:hover .divFill {
+            opacity: 1;
         }
 
         .bannerMark {
@@ -75,15 +79,51 @@
             inset: 0;
             z-index: 1;
             transition: opacity 0.5s ease;
-            pointer-events: all;
-        }
-
-        .divFill:hover {
-            opacity: 0.5;
+            opacity: 0.75;
         }
 
         .container:hover .bannerMark {
             width: 60px;
+        }
+
+        .projetButtonDiv {
+            display: inline-block;
+            position: absolute;
+            bottom: -20px;
+            transition: bottom 0.5s ease;
+            transform: translateY(100%);
+            z-index: 5;
+            width: 100%;
+        }
+
+        .container:hover .projetButtonDiv {
+            bottom: 60px;
+        }
+
+        .projetButtonDiv button {
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .projetButtonDiv button:hover {
+            background-color: #cc1;
+            color: #111;
+        }
+
+        .container h1,
+        .container h2,
+        .container p {
+            opacity: 0.5;
+            transition: opacity 0.5s ease;
+        }
+
+        .container:hover h1,
+        .container:hover h2,
+        .container:hover p {
+            opacity: 1;
         }
 
         .section-title {
@@ -141,15 +181,18 @@
 
     <div class="container"
         style="background-image: url(BinanceBanner31brightGrid.png); background-repeat: no-repeat; background-size: cover;">
-        <div class="bannerMark" style="background-color: #aa0;"></div>
-        <div class="divFill" style="background: linear-gradient(to right, #000c, #0008);"></div>
-        <h1 class="projectTitle" style="color: #cc1; font-weight: bold;">Bot de trading Binance</h1>
+        <div class="bannerMark" style="background-color: #da0;"></div>
+        <div class="divFill" style="background: linear-gradient(to right, #000d, #0009);"></div>
+        <h1 class="projectTitle" style="color: #fc1; font-weight: bold;">Bot de trading Binance</h1>
         <p style="font-size: larger;">En utilisant l'API Binance, le code importe des données et des indicateurs pour
             une devise
             choisie (Bitcoin, Ethereum, Dogecoin...) et envoie des requêtes (achat, vente, emprunts, etc...)
             de décision en fonction de ces données et la stratégie choisie (scalping, swing trading ou day trading...).
         </p>
         <p>Techniques utilisées : Python, Binance API, Pandas, NumPy</p>
+        <div class="projetButtonDiv">
+            <button style="background-color: #fc1; font-weight: bold; pointer-events: fill;">En savoir plus</button>
+        </div>
     </div>
 
     <div class="container">
